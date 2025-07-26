@@ -16,6 +16,7 @@ font-family: "Montserrat", sans-serif;
 font-family: "Open Sans", sans-serif; */
 html{
     font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
+    
 }
 
 h1 {
@@ -35,6 +37,7 @@ h1 {
 
 h2{
     font-size: 5.5rem;
+    margin-bottom: 2rem;
 }
 
 h3{
@@ -140,12 +143,13 @@ color: rgb(255, 224, 88);
 } */
 .ground-2{
     background-color: white;
-    color: white;
+    color: rgb(0, 0, 0);
+    
 }
 
 .intro-content{
     position: relative;
-    top: -7rem;
+    top: -4rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
@@ -168,4 +172,17 @@ color: rgb(255, 224, 88);
  max-width: 100%;
  height: auto;
 
+}
+
+.content-3{
+   height: 100vh; 
+   display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    max-width: 64rem;
+    text-align: center;
+}
+
+p{
+    margin-bottom: 3rem;
 }

@@ -17,6 +17,7 @@ font-family: "Open Sans", sans-serif; */
 html{
     font-size: 62.5%; /* 1rem = 10px */
     scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
 }
 
 body {
@@ -79,7 +80,7 @@ h6{
     min-height: 100vh;
 }
 
-.logo{
+.logo {
     width: 19rem;
     height: 10rem;
     margin: 0;
@@ -147,19 +148,21 @@ color: rgb(255, 224, 88);
     
 }
 
-.intro-content{
+.intro-content {
     position: relative;
-    top: -4rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
 }
 .intro-text-content, .intro-img{
     display: flex;
     flex-direction: column;
     justify-content: center;
+   align-items: center;
 }
+
 
 .intro-text-content h2 {
     font-size: 5rem;
@@ -185,4 +188,46 @@ color: rgb(255, 224, 88);
 
 p{
     margin-bottom: 3rem;
+}
+
+.grid-one-content{
+    height: 100vh; 
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+    counter-reset: grid-counter;
+}
+
+.grid h3{
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 3rem;
+}
+
+.grid h3::before{
+    counter-increment: grid-counter;
+    content:  counter(grid-counter)  ;
+    margin-right: 1rem;
+    color: rgb(255, 224, 88);
+    font-size: 7rem;
+    font-style: italic;
+    position: absolute;
+    transform: rotate(5deg);
+    top: -3rem;
+    left: -1rem;
+
+
+}
+.grid-main-headin{
+    margin-bottom: 1rem;
+}
+.grid-description{
+    padding-bottom: 5rem;
 }
